@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 import eternity.Config;
 import eternity.Field;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -16,6 +18,8 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class PlanLogger implements IPlanChainable, ILabelled {
+
+	@Setter @Getter
 	private PlanSet planSet;
 
 	private long[] oldTryCounts = new long[Config.MAXLEVEL];
@@ -36,7 +40,12 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 
 	private long count = 0;
 
+	@Setter @Getter
 	private String loggerName;
+	@Setter @Getter
+	private IPlan next;
+	@Setter @Getter
+	private IPlan first;
 
 	protected void logPlan() {
 
@@ -81,16 +90,9 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 					oldTryCount += oldTryCounts[i];
 					oldAllCount += oldAllCounts[i];
 				}
-
 				log.info(
-						"["
-								+ oldAllCount
-								+ "/"
-								+ oldTryCount
-								+ "]==="
-								+ " branch started:::::"
-								+ Field.toString(planSet.getFields(), planSet
-										.getFieldOccupation()));
+						"{} [{}]/[{}]]=== branch started:::::{}",loggerName,oldAllCount,oldTryCount,Field.toString(planSet.getFields(), planSet
+								.getFieldOccupation()));
 
 				long lastTime = System.currentTimeMillis();
 
@@ -123,7 +125,7 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 				}
 
 				//Counts
-				int maxLev = newAllCounts.length;
+				int maxLev;
 				for (maxLev = newAllCounts.length - 1; maxLev >= 0
 						&& newAllCounts[maxLev] == oldAllCounts[maxLev]; maxLev--)
 					;
@@ -154,51 +156,7 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 		return Field.NULLARRAY;
 	}
 
-	public PlanSet getPlanSet() {
-		return planSet;
-	}
-
-	public void setPlanSet(PlanSet planSet) {
-		this.planSet = planSet;
-
-	}
-
-	private IPlan next;
-
-	private IPlan first;
-
-	public IPlan getNext() {
-		return next;
-	}
-
-	public void setNext(IPlan next) {
-		this.next = next;
-	}
-
 	public void stop() {
-	}
-
-	/**
-	 * @return Returns the first.
-	 */
-	public IPlan getFirst() {
-		return first;
-	}
-
-	/**
-	 * @param first
-	 *            The first to set.
-	 */
-	public void setFirst(IPlan first) {
-		this.first = first;
-	}
-
-	/**
-	 * @param loggerName
-	 *            The loggerName to set.
-	 */
-	public void setLoggerName(String loggerName) {
-		this.loggerName = loggerName;
 	}
 
 	/*

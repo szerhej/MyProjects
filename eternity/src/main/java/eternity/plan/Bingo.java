@@ -20,9 +20,6 @@ public class Bingo extends PlanLogger {
 
 	private long count = 0;
 
-	/**
-	 * @param field
-	 */
 	public Bingo() {
 	}
 

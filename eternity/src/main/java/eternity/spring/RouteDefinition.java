@@ -22,6 +22,8 @@ import eternity.plan.IRun;
 import eternity.plan.IndexMap;
 import eternity.plan.PlanSet;
 import eternity.plan.PlanSimpleSkeleton;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author gxfulop
@@ -33,9 +35,10 @@ public class RouteDefinition implements IPlanChained {
 
 	private Collection route;
 
+	@Getter @Setter
 	private PlanSet planSet;
 
-	private List elementList = null;
+	private List<IPlan> elementList = null;
 
 	public void setRoute(Collection route) {
 		elementList = null;
@@ -47,7 +50,7 @@ public class RouteDefinition implements IPlanChained {
 
 	public Collection generatePlan(String route, PlanSet planSet) {
 		String[] planDescs = route.split("\\s*,\\s*");
-		Collection buff = new ArrayList();
+		Collection<IPlan> buff = new ArrayList<>();
 		IPlan plan = null;
 
 		for (int ix = 0; ix < planDescs.length; ix++) {
@@ -67,8 +70,7 @@ public class RouteDefinition implements IPlanChained {
 			buff.add(plan);
 		}
 
-		for (Iterator iter = buff.iterator(); iter.hasNext();) {
-			IPlan element = (IPlan) iter.next();
+		for (IPlan element:buff) {
 			if (element instanceof IPlanSimple)
 				try {
 					IPlanSimple planSimple = (IPlanSimple) element;
@@ -85,11 +87,10 @@ public class RouteDefinition implements IPlanChained {
 
 	public IRun compile(IndexMap indexMap, int level) {
 		if (elementList == null) {
-			elementList = new ArrayList();
-			for (Iterator iter = route.iterator(); iter.hasNext();) {
-				Object element = iter.next();
+			elementList = new ArrayList<>();
+			for (Object element:route) {
 				if (element instanceof IPlan)
-					elementList.add(element);
+					elementList.add((IPlan)element);
 				else if (element instanceof String)
 					elementList.addAll(generatePlan((String) element, planSet));
 				else
@@ -106,23 +107,9 @@ public class RouteDefinition implements IPlanChained {
 					prev = null;
 			}
 		}
-		return ((IPlan) elementList.get(0)).compile(indexMap, level);
+		return elementList.get(0).compile(indexMap, level);
 	}
 
-	/**
-	 * @return Returns the planSet.
-	 */
-	public PlanSet getPlanSet() {
-		return planSet;
-	}
-
-	/**
-	 * @param planSet
-	 *            The planSet to set.
-	 */
-	public void setPlanSet(PlanSet planSet) {
-		this.planSet = planSet;
-	}
 
 	public void stop() {
 		for (Iterator iter = elementList.iterator(); iter.hasNext();) {
