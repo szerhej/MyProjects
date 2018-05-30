@@ -79,8 +79,8 @@ public class Field implements Comparable {
 	}
 
 	/**
-	 * @param figure
-	 *            The figure to set.
+	 *
+	 * @param figureVector The figure to set.
 	 */
 	public void setVector(FigureVector figureVector) {
 		this.figureVector = figureVector;

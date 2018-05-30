@@ -6,6 +6,9 @@
  */
 package eternity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * @author gxfulop
  * 
@@ -13,11 +16,15 @@ package eternity;
  * Preferences - Java - Code Style - Code Templates
  */
 public class FieldVector {
+
+    @Setter @Getter
     private Field fieldFrom;
 
+    @Setter @Getter
     private Field fieldTo;
 
     //regards fieldFrom
+    @Setter @Getter
     private int index;
 
     /**
@@ -35,51 +42,8 @@ public class FieldVector {
 
     }
 
-    /**
-     * @return Returns the index.
-     */
-    public int getIndex() {
-        return index;
-    }
 
-    /**
-     * @param index
-     *            The index to set.
-     */
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
-    /**
-     * @return Returns the fieldFrom.
-     */
-    public Field getFieldFrom() {
-        return fieldFrom;
-    }
-
-    /**
-     * @param fieldFrom
-     *            The fieldFrom to set.
-     */
-    public void setFieldFrom(Field fieldFrom) {
-        this.fieldFrom = fieldFrom;
-    }
-
-    /**
-     * @return Returns the fieldTo.
-     */
-    public Field getFieldTo() {
-        return fieldTo;
-    }
-
-    /**
-     * @param fieldTo
-     *            The fieldTo to set.
-     */
-    public void setFieldTo(Field fieldTo) {
-        this.fieldTo = fieldTo;
-    }
-
+    @Override
     public String toString() {
         return fieldFrom.toString() + "-->" + fieldTo.toString() + "^" + index;
     }

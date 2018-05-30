@@ -45,10 +45,6 @@ public class PlanFork implements IPlan {
 		this.fork = (IPlan[]) fork.toArray(new IPlan[fork.size()]);
 	}
 
-	public Field[] getFields() {
-		return new Field[] {};
-	}
-
 	public void stop() {
 	}
 

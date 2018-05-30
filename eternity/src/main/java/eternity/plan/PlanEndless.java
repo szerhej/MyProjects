@@ -11,6 +11,8 @@ import java.util.Random;
 
 
 import eternity.Field;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -22,15 +24,16 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PlanEndless implements IPlanChainable {
 
+	@Setter @Getter
+	private IPlan next;
+
 	public String getName() {
 		return "ENDLESS";
 	}
 
 	public IRun compile(final IndexMap map, int level) {
 		final IRun run = next.compile(map, level);
-		return new IRun() {
-
-			public void call() {
+		return () ->  {
 				Random random = new Random();
 				while (true) {
 					log.info("Endless Plan: Start New Iteration");
@@ -38,30 +41,15 @@ public class PlanEndless implements IPlanChainable {
 					log.info("Shuffle Number:" + shuffle);
 					run.call();
 				}
-			}
-
 		};
 	}
 
+	@Override
 	public String toString() {
 		return getName();
 	}
 
-	private IPlan next;
-
-	public IPlan getNext() {
-		return next;
-	}
-
-	public void setNext(IPlan next) {
-		this.next = next;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see eternity.plan.Plan#stop()
-	 */
+	@Override
 	public void stop() {
 	}
 
