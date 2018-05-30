@@ -14,6 +14,8 @@ import eternity.Figure;
 import eternity.FieldVector;
 import eternity.FigureVector;
 import eternity.Utility;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -25,44 +27,32 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 class PlanSimple2 implements IPlanSimple {
 
-	private PlanSet planSet;
-
-	private long planCounter = 0;
-
-	private long planTryCounter = 0;
-
-	private boolean stopped;
-
-	private Field field;
-
-	private Field[] fields;
-
-	private FieldVector fieldVector1;
-
-	private FieldVector fieldVector2;
-
-	private FigureVector[][][] figureMap;
-
 	private final static String PREPOS = "S2";
+	@Getter
+	private PlanSet planSet;
+	@Getter
+	private long planCounter = 0;
+	@Getter
+	private long tryCounter = 0;
+	private boolean stopped;
+	@Getter
+	private Field field;
+	@Getter
+	private Field[] fields;
+	@Setter @Getter
+	private FieldVector fieldVector1;
+	@Getter @Setter
+	private FieldVector fieldVector2;
+	private FigureVector[][][] figureMap;
+	@Getter
+	private int level;
+	@Getter @Setter
+	private IPlan next;
 
 	public PlanSimple2(Field field, PlanSet planSet) {
 		this.field = field;
 		fields = new Field[] { field };
 		this.planSet = planSet;
-	}
-
-	/**
-	 * @return Returns the fieldVector1.
-	 */
-	public FieldVector getMatchField1() {
-		return fieldVector1;
-	}
-
-	/**
-	 * @return Returns the fieldVector2.
-	 */
-	public FieldVector getMatchField2() {
-		return fieldVector2;
 	}
 
 	public IRun compile(IndexMap indexMap, int level) {
@@ -160,7 +150,7 @@ class PlanSimple2 implements IPlanSimple {
 						figureCount[figureId]++;
 					}
 				}
-				planTryCounter+=iterator;
+				tryCounter +=iterator;
 				fieldOccupation[field.getPos()] = null;
 			}
 		};
@@ -170,68 +160,9 @@ class PlanSimple2 implements IPlanSimple {
 		return "S2-" + level + "-" + field.toStringg();
 	}
 
-	public long getPlanCounter() {
-		return planCounter;
-	}
-
-	public long getTryCounter() {
-		return planTryCounter;
-	}
-
-	public PlanSet getPlanSet() {
-		return planSet;
-	}
-
-	public void setPlanSet(PlanSet planSet) {
-		this.planSet = planSet;
-
-	}
-
-	private int level;
-
-	private IPlan next;
-
-	public IPlan getNext() {
-		return next;
-	}
-
-	public void setNext(IPlan next) {
-		this.next = next;
-	}
-
 	public void stop() {
 		stopped = true;
 	}
 
-	/**
-	 * @return Returns the level.
-	 */
-	public int getLevel() {
-		return level;
-	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see eternity.plan.IPlanSimple#getField()
-	 */
-	public Field getField() {
-		return field;
-	}
-
-	/**
-	 * @param fieldVector1
-	 *            The fieldVector1 to set.
-	 */
-	public void setFieldVector1(FieldVector fieldVector1) {
-		this.fieldVector1 = fieldVector1;
-	}
-
-	/**
-	 * @param fieldVector2
-	 *            The fieldVector2 to set.
-	 */
-	public void setFieldVector2(FieldVector fieldVector2) {
-		this.fieldVector2 = fieldVector2;
-	}
 }

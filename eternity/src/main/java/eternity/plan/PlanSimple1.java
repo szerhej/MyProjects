@@ -14,6 +14,8 @@ import eternity.Figure;
 import eternity.FieldVector;
 import eternity.FigureVector;
 import eternity.Utility;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -25,23 +27,25 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 class PlanSimple1 implements IPlanSimple {
 
-	private PlanSet planSet;
-
-	private long planCounter = 0;
-
-	private long planTryCounter = 0;
-
-	private boolean stopped;
-
-	private Field field;
-
-	private Field[] fields;
-
-	private FieldVector fieldVector;
-
-	private FigureVector[][] figureMap;
-
 	private final static String PREPOS = "S1";
+	@Setter @Getter
+	private PlanSet planSet;
+	@Setter @Getter
+	private long planCounter = 0;
+	@Setter @Getter
+	private long tryCounter = 0;
+	private boolean stopped;
+	@Getter
+	private Field field;
+	@Getter
+	private Field[] fields;
+	@Getter @Setter
+	private FieldVector fieldVector;
+	private FigureVector[][] figureMap;
+	@Getter @Setter
+	private int level;
+	@Getter @Setter
+	private IPlan next;
 
 	public PlanSimple1(Field field, PlanSet planSet) {
 		this.field = field;
@@ -119,7 +123,7 @@ class PlanSimple1 implements IPlanSimple {
 										.getFieldFrom().getPos()].getIndex()) % 4)];
 				if (map != null) {
 					for (int iterator = 0; iterator < map.length && !stopped; iterator++) {
-						planTryCounter++;
+						tryCounter++;
 						int figureId = map[iterator].getFigure().getId();
 						if (figureCount[figureId] > 0) {
 							figureCount[figureId]--;
@@ -138,72 +142,9 @@ class PlanSimple1 implements IPlanSimple {
 		return "S1-" + level + "-" + field.toStringg();
 	}
 
-	public long getPlanCounter() {
-		return planCounter;
-	}
-
-	public long getTryCounter() {
-		return planTryCounter;
-	}
-
-	public PlanSet getPlanSet() {
-		return planSet;
-	}
-
-	public void setPlanSet(PlanSet planSet) {
-		this.planSet = planSet;
-
-	}
-
-	public Field[] getFields() {
-		return fields;
-	}
-
-	private int level;
-
-	private IPlan next;
-
-	public IPlan getNext() {
-		return next;
-	}
-
-	public void setNext(IPlan next) {
-		this.next = next;
-	}
-
 	public void stop() {
 		stopped = true;
 	}
 
-	/**
-	 * @return Returns the level.
-	 */
-	public int getLevel() {
-		return level;
-	}
 
-	/**
-	 * @param level
-	 *            The level to set.
-	 */
-	public void setLevel(int level) {
-		this.level = level;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see eternity.plan.IPlanSimple#getField()
-	 */
-	public Field getField() {
-		return field;
-	}
-
-	/**
-	 * @param fieldVector
-	 *            The fieldVector to set.
-	 */
-	public void setFieldVector(FieldVector fieldVector) {
-		this.fieldVector = fieldVector;
-	}
 }

@@ -9,6 +9,8 @@ package eternity.plan;
 import eternity.Field;
 import eternity.FieldVector;
 import eternity.Figure;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author gxfulop
@@ -21,9 +23,12 @@ public class PlanSimpleSkeleton implements IPlanSimple,ILabelled {
 
 	private PlanSet planSet;
 
+	@Getter
 	private Field field;
 
 	private IPlanSimple[] planSimples = null;
+	@Getter @Setter
+	private IPlan next;
 
 	public PlanSimpleSkeleton(Field field, PlanSet planSet) {
 		this.field = field;
@@ -83,28 +88,10 @@ public class PlanSimpleSkeleton implements IPlanSimple,ILabelled {
 		return plan.getTryCounter();
 	}
 
-	private IPlan next;
-
-	public IPlan getNext() {
-		return next;
-	}
-
-	public void setNext(IPlan next) {
-		this.next = next;
-	}
-
 	public void stop() {
 		plan.stop();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see eternity.plan.IPlanSimple#getField()
-	 */
-	public Field getField() {
-		return field;
-	}
 
 	/*
 	 * (non-Javadoc)
