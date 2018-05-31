@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-init-method="init" >
+
+
+	<bean id="figureSet"
+		class="fg.eternity.spring.FigureSet">
+		<property name="figureMap">
+			<map key-type="java.lang.Integer" >
+				<entry key="1" value="aq**" />
+				<entry key="2" value="ae**" />
+				<entry key="3" value="iq**" />
+				<entry key="4" value="qi**" />
+				<entry key="5" value="ba*a" />
+				<entry key="6" value="ji*a" />
+				<entry key="7" value="fa*a" />
+				<entry key="8" value="fm*a" />
+				<entry key="9" value="kq*a" />
+				<entry key="10" value="ge*a" />
+				<entry key="11" value="oi*a" />
+				<entry key="12" value="he*a" />
+				<entry key="13" value="hm*a" />
+				<entry key="14" value="ue*a" />
+				<entry key="15" value="ja*i" />
+				<entry key="16" value="rq*i" />
+				<entry key="17" value="nm*i" />
+				<entry key="18" value="sm*i" />
+				<entry key="19" value="gi*i" />
+				<entry key="20" value="oi*i" />
+				<entry key="21" value="de*i" />
+				<entry key="22" value="la*i" />
+				<entry key="23" value="lm*i" />
+				<entry key="24" value="ta*i" />
+				<entry key="25" value="ua*i" />
+				<entry key="26" value="bi*q" />
+				<entry key="27" value="bq*q" />
+				<entry key="28" value="jq*q" />
+				<entry key="29" value="rq*q" />
+				<entry key="30" value="gm*q" />
+				<entry key="31" value="oi*q" />
+				<entry key="32" value="tq*q" />
+				<entry key="33" value="hi*q" />
+				<entry key="34" value="he*q" />
+				<entry key="35" value="pm*q" />
+				<entry key="36" value="ve*q" />
+				<entry key="37" value="ra*e" />
+				<entry key="38" value="cm*e" />
+				<entry key="39" value="km*e" />
+				<entry key="40" value="si*e" />
+				<entry key="41" value="sq*e" />
+				<entry key="42" value="oa*e" />
+				<entry key="43" value="oi*e" />
+				<entry key="44" value="oq*e" />
+				<entry key="45" value="da*e" />
+				<entry key="46" value="te*e" />
+				<entry key="47" value="he*e" />
+				<entry key="48" value="pe*e" />
+				<entry key="49" value="bm*m" />
+				<entry key="50" value="ja*m" />
+				<entry key="51" value="ji*m" />
+				<entry key="52" value="fa*m" />
+				<entry key="53" value="ge*m" />
+				<entry key="54" value="de*m" />
+				<entry key="55" value="dm*m" />
+				<entry key="56" value="hq*m" />
+				<entry key="57" value="pa*m" />
+				<entry key="58" value="pm*m" />
+				<entry key="59" value="ui*m" />
+				<entry key="60" value="vq*m" />
+				<entry key="61" value="frbb" />
+				<entry key="62" value="ngbb" />
+				<entry key="63" value="jcbj" />
+				<entry key="64" value="bhbr" />
+				<entry key="65" value="rvbr" />
+				<entry key="66" value="nnbr" />
+				<entry key="67" value="kjbr" />
+				<entry key="68" value="tfbr" />
+				<entry key="69" value="vhbr" />
+				<entry key="70" value="cgbc" />
+				<entry key="71" value="glbc" />
+				<entry key="72" value="nrbk" />
+				<entry key="73" value="odbk" />
+				<entry key="74" value="tobk" />
+				<entry key="75" value="hcbk" />
+				<entry key="76" value="nobs" />
+				<entry key="77" value="sobs" />
+				<entry key="78" value="cpbg" />
+				<entry key="79" value="tcbg" />
+				<entry key="80" value="pubg" />
+				<entry key="81" value="srbo" />
+				<entry key="82" value="rrbd" />
+				<entry key="83" value="kdbd" />
+				<entry key="84" value="rsbl" />
+				<entry key="85" value="fnbl" />
+				<entry key="86" value="hlbl" />
+			<entry key="87" value="ptbl" />
+				<entry key="88" value="bubt" />
+				<entry key="89" value="fvbt" />
+					<entry key="90" value="dpbt" />
+				<entry key="91" value="klbh" />
+				<entry key="92" value="sobh" />
+				<entry key="93" value="sdbh" />
+				<entry key="94" value="dubh" />
+				<entry key="95" value="lnbh" />
+				<entry key="96" value="ucbu" />
+				<entry key="97" value="dsbv" />
+				<entry key="98" value="thbv" />
+				<entry key="99" value="ufbv" />
+				<entry key="100" value="vubv" />
+				<entry key="101" value="lojj" />
+				<entry key="102" value="lpjj" />
+				<entry key="103" value="psjj" />
+				<entry key="104" value="vfjj" />
+				<entry key="105" value="dojr" />
+				<entry key="106" value="chjf" />
+				<entry key="107" value="shjf" />
+				<entry key="108" value="dojf" />
+				<entry key="109" value="pkjf" />
+				<entry key="110" value="oljn" />
+				<entry key="111" value="lojn" />
+				<entry key="112" value="tsjc" />
+				<entry key="113" value="tpjc" />
+				<entry key="114" value="ndjk" />
+				<entry key="115" value="gljk" />
+				<entry key="116" value="lkjk" />
+				<entry key="117" value="vpjk" />
+				<entry key="118" value="cujs" />
+				<entry key="119" value="pljg" />
+				<entry key="120" value="hvjo" />
+				<entry key="121" value="nvjd" />
+				<entry key="122" value="fpjt" />
+				<entry key="123" value="nsjt" />
+				<entry key="124" value="tojt" />
+				<entry key="125" value="lvjh" />
+				<entry key="126" value="uojh" />
+				<entry key="127" value="nfjp" />
+				<entry key="128" value="sujp" />
+				<entry key="129" value="dcjp" />
+				<entry key="130" value="thjp" />
+				<entry key="131" value="ftju" />
+				<entry key="132" value="lnju" />
+				<entry key="133" value="npjv" />
+				<entry key="134" value="kdjv" />
+				<entry key="135" value="dcjv" />
+				<entry key="136" value="ptjv" />
+				<entry key="137" value="tgrr" />
+				<entry key="138" value="fcrf" />
+				<entry key="139" value="fkrf" />
+				<entry key="140" value="flrf" />
+				<entry key="141" value="surf" />
+				<entry key="142" value="ofrf" />
+				<entry key="143" value="plrf" />
+				<entry key="144" value="uurf" />
+				<entry key="145" value="cdrn" />
+				<entry key="146" value="rlrc" />
+				<entry key="147" value="rvrc" />
+				<entry key="148" value="cnrc" />
+				<entry key="149" value="olrc" />
+				<entry key="150" value="fkrs" />
+				<entry key="151" value="dvrs" />
+				<entry key="152" value="kkrg" />
+				<entry key="153" value="ksrg" />
+				<entry key="154" value="vprg" />
+				<entry key="155" value="ggrd" />
+				<entry key="156" value="glrd" />
+				<entry key="157" value="vgrd" />
+				<entry key="158" value="gprt" />
+				<entry key="159" value="hfrt" />
+				<entry key="160" value="uurh" />
+				<entry key="161" value="ftrp" />
+				<entry key="162" value="ntrp" />
+				<entry key="163" value="okrv" />
+				<entry key="164" value="dprv" />
+				<entry key="165" value="cdfn" />
+				<entry key="166" value="dhfn" />
+				<entry key="167" value="ccfk" />
+				<entry key="168" value="kofs" />
+				<entry key="169" value="sufs" />
+				<entry key="170" value="dhfg" />
+				<entry key="171" value="tpfg" />
+				<entry key="172" value="ukfg" />
+				<entry key="173" value="oofo" />
+				<entry key="174" value="ltfo" />
+				<entry key="175" value="gufd" />
+				<entry key="176" value="gsfl" />
+				<entry key="177" value="ndft" />
+				<entry key="178" value="lpfh" />
+				<entry key="179" value="hofh" />
+				<entry key="180" value="gpfp" />
+				<entry key="181" value="kpfu" />
+				<entry key="182" value="gkfu" />
+				<entry key="183" value="shnn" />
+				<entry key="184" value="vgnc" />
+				<entry key="185" value="slnk" />
+				<entry key="186" value="hhnk" />
+				<entry key="187" value="ugns" />
+				<entry key="188" value="nung" />
+				<entry key="189" value="csng" />
+				<entry key="190" value="psng" />
+				<entry key="191" value="ccno" />
+				<entry key="192" value="otno" />
+				<entry key="193" value="kgnd" />
+				<entry key="194" value="uknl" />
+				<entry key="195" value="uvnl" />
+				<entry key="196" value="vonl" />
+				<entry key="197" value="kvnt" />
+				<entry key="198" value="shnt" />
+				<entry key="199" value="ttnt" />
+				<entry key="200" value="scnh" />
+				<entry key="201" value="uhnp" />
+				<entry key="202" value="vgnp" />
+				<entry key="203" value="lsnu" />
+				<entry key="204" value="lhnu" />
+				<entry key="205" value="pcnu" />
+				<entry key="206" value="vunu" />
+				<entry key="207" value="vgcc" />
+				<entry key="208" value="svck" />
+				<entry key="209" value="hock" />
+				<entry key="210" value="kscg" />
+				<entry key="211" value="pocg" />
+				<entry key="212" value="cpco" />
+				<entry key="213" value="hhcd" />
+				<entry key="214" value="ctcl" />
+				<entry key="215" value="dvcl" />
+				<entry key="216" value="vucl" />
+				<entry key="217" value="soct" />
+				<entry key="218" value="dlcp" />
+				<entry key="219" value="kdcu" />
+				<entry key="220" value="kpcv" />
+				<entry key="221" value="uucv" />
+				<entry key="222" value="uvcv" />
+				<entry key="223" value="lvkk" />
+				<entry key="224" value="tgkk" />
+				<entry key="225" value="pokk" />
+				<entry key="226" value="sokg" />
+				<entry key="227" value="llkg" />
+				<entry key="228" value="shkd" />
+				<entry key="229" value="gvkt" />
+				<entry key="230" value="phkt" />
+				<entry key="231" value="ltkh" />
+				<entry key="232" value="lukh" />
+				<entry key="233" value="stss" />
+				<entry key="234" value="pdsg" />
+				<entry key="235" value="gdsd" />
+				<entry key="236" value="gtsd" />
+				<entry key="237" value="losd" />
+				<entry key="238" value="dpsl" />
+				<entry key="239" value="ovst" />
+				<entry key="240" value="uost" />
+				<entry key="241" value="gush" />
+				<entry key="242" value="dush" />
+				<entry key="243" value="olgo" />
+				<entry key="244" value="thgo" />
+				<entry key="245" value="vtgd" />
+				<entry key="246" value="pvgu" />
+				<entry key="247" value="uvoo" />
+				<entry key="248" value="ldod" />
+				<entry key="249" value="duol" />
+				<entry key="250" value="puot" />
+				<entry key="251" value="vhdd" />
+				<entry key="252" value="hldl" />
+				<entry key="253" value="ptlh" />
+				<entry key="254" value="uptp" />
+				<entry key="255" value="pvtv" />
+				<entry key="256" value="uvhv" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="mainRoute"
+		class="fg.eternity.spring.RouteDefinition">
+		<property name="route">
+			<list>
+				<ref bean="endless"/>
+				<value>{A16},{A15},{B16},{B15},{C16},{A14},{D16},{C15},{B14},{E16},{D15},{F16},{E15},{D14},{G16},{F15},{E14},{H16},{G15},{F14},{I16},{H15},{G14},{J16},{I15},{H14},{K16},{J15},{I14},{L16},{K15},{J14},{M16},{L15},{K14},{N16},{M15},{L14},{O16},{N15},{M14},{P16},{O15},{P15},{O14},{P14}</value>
+				<value>{P13},{O13},{N13},{P12},{O12},{N12},{P11},{O11},{N11},{P10},{O10},{N10},{P9},{O9},{N9},{P8},{O8},{N8},{P7},{O7},{N7}</value>
+				<ref bean="once"/>
+				<ref bean="logger"/>
+				<value>{P6},{O6},{N6},{P5},{O5},{N5},{P4},{O4},{N4},{P3},{O3},{P2},{O2},{N2},{P1},{O1},{N1}</value>
+				<value>{M13},{L13},{K13},{J13},{I13}</value>
+				<value>{M12},{M11},{M10},{M9}</value>
+				<value>{L12},{K12},{J12},{I12}</value>
+				<value>{L11},{L10},{L9}</value>
+				<value>{K11},{J11},{I11}</value>
+				<value>{K10},{K9}</value>
+				<value>{J10},{I10},{J9},{I9}</value>
+				<value>{M8},{L8},{K8},{J8}</value>
+				<value>{H13},{G13},{F13},{E13},{D13},{C13},{B13},{A13}</value>
+				<value>{M7},{M6},{M5},{M4},{M3},{M2},{M1}</value>
+				<value>{H12},{G12},{F12},{E12},{D12},{C12},{B12},{A12}</value>
+				<value>{L7},{L6},{L5},{L4},{L3},{L2},{L1}</value>
+				<value>{H11},{G11},{F11},{E11},{D11},{C11},{B11},{A11}</value>
+				<value>{K7},{K6},{K5},{K4},{K3},{K2},{K1}</value>
+				<value>{H10},{G10},{F10},{E10},{D10},{C10},{B10},{A10}</value>
+				<value>{J7},{J6},{J5},{J4},{J3},{J2},{J1}</value>
+				<value>{H9},{G9},{F9},{E9},{D9},{C9},{B9},{A9}</value>
+				<value>{I7},{I6},{I5},{I4},{I3},{I2},{I1}</value>
+				<ref bean="finalFork"/>
+			</list>
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+	
+	<bean id="finalFork"
+		class="fg.eternity.plan.PlanFork">
+		<property name="forkList">
+			<list>
+				<ref bean="final1"/>
+				<ref bean="final2"/>
+				<ref bean="final3"/>
+				<ref bean="final6"/>
+				<ref bean="final7"/>
+			</list>
+		</property>
+	</bean>
+	
+
+	<bean id="final1"
+		class="fg.eternity.spring.RouteDefinition">
+		<property name="route">
+			<list>
+				<value>{H8},{G8},{F8},{E8},{D8},{C8},{B8},{H7},{H6},{H5},{H4},{H3},{H2},{G7},{F7}</value>
+				<bean class="fg.eternity.plan.PlanLogger">
+					<property name="first">
+						<ref bean="mainRoute" />
+					</property>
+					<property name="loggerName" value="GOAL"/>
+					<property name="planSet">
+						<ref bean="mainTable" />
+					</property>
+				</bean>
+				<value>{E7},{D7},{C7},{B7},{G6},{G5},{G4},{G3},{G2},{F6},{E6},{D6},{C6},{B6},{F5},{F4},{F3},{F2},{E5},{D5},{C5},{B5},{E4},{E3},{E2},{D4},{C4},{B4},{D3},{D2},{B3},{C2},{B2}</value>
+				<ref bean="bingo"/>
+			</list>
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+	
+	<bean id="final2"
+		class="fg.eternity.spring.RouteDefinition">
+		<property name="route">
+			<list>
+				<value>{H8},{H7},{H6},{H5},{H4},{H3},{H2},{G8},{F8},{E8},{D8},{C8},{B8},{G7},{G6}</value>
+				<bean class="fg.eternity.plan.PlanLogger">
+					<property name="first">
+						<ref bean="mainRoute" />
+					</property>
+					<property name="loggerName" value="GOAL"/>
+					<property name="planSet">
+						<ref bean="mainTable" />
+					</property>
+				</bean>
+				<value>{G5},{G4},{G3},{G2},{F7},{E7},{D7},{C7},{B7},{F6},{E6},{D6},{C6},{B6},{F5},{F4},{F3},{F2},{E5},{D5},{C5},{B5},{E4},{E3},{E2},{D4},{C4},{B4},{D3},{D2},{B3},{C2},{B2}</value>
+				<ref bean="bingo"/>
+			</list>
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+
+	<bean id="final3"
+		class="fg.eternity.spring.RouteDefinition">
+		<property name="route">
+			<list>
+				<value>{H8},{H7},{G8},{H6},{G7},{F8},{H5},{G6},{F7},{E8},{H4},{G5},{F6},{E7},{D8}</value>
+				<bean class="fg.eternity.plan.PlanLogger">
+					<property name="first">
+						<ref bean="mainRoute" />
+					</property>
+					<property name="loggerName" value="GOAL"/>
+					<property name="planSet">
+						<ref bean="mainTable" />
+					</property>
+				</bean>
+				<value>{H3},{G4},{F5},{E6},{D7},{C8},{H2},{G3},{F4},{E5},{D6},{C7},{B8},{G2},{F3},{E4},{D5},{C6},{B7},{F2},{E3},{D4},{C5},{B6},{E2},{D3},{C4},{B5},{D2},{B4},{C2},{B3},{B2}</value>
+				<ref bean="bingo"/>
+			</list>
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+
+	<bean id="final6"
+		class="fg.eternity.spring.RouteDefinition">
+		<property name="route">
+			<list>
+				<value>{H8},{G8},{F8},{E8},{D8},{C8},{B8},{H7},{G7},{F7},{E7},{D7},{C7},{B7},{H6}</value>
+				<bean class="fg.eternity.plan.PlanLogger">
+					<property name="first">
+						<ref bean="mainRoute" />
+					</property>
+					<property name="loggerName" value="GOAL"/>
+					<property name="planSet">
+						<ref bean="mainTable" />
+					</property>
+				</bean>
+				<value>{G6},{F6},{E6},{D6},{C6},{B6},{H5},{G5},{F5},{E5},{D5},{C5},{B5},{H4},{G4},{F4},{E4},{D4},{C4},{B4},{H3},{G3},{F3},{E3},{D3},{B3},{H2},{G2},{F2},{E2},{D2},{C2},{B2}</value>
+				<ref bean="bingo"/>
+			</list>
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+
+	<bean id="final7"
+		class="fg.eternity.spring.RouteDefinition">
+		<property name="route">
+			<list>
+				<value>{H8},{H7},{H6},{H5},{H4},{H3},{H2},{G8},{G7},{G6},{G5},{G4},{G3},{G2},{F8}</value>
+				<bean class="fg.eternity.plan.PlanLogger">
+					<property name="first">
+						<ref bean="mainRoute" />
+					</property>
+					<property name="loggerName" value="GOAL"/>
+					<property name="planSet">
+						<ref bean="mainTable" />
+					</property>
+				</bean>
+				<value>{F7},{F6},{F5},{F4},{F3},{F2},{E8},{E7},{E6},{E5},{E4},{E3},{E2},{D8},{D7},{D6},{D5},{D4},{D3},{D2},{C8},{C7},{C6},{C5},{C4},{C2},{B8},{B7},{B6},{B5},{B4},{B3},{B2}</value>
+				<ref bean="bingo"/>
+			</list>
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+	
+	<bean id="fieldSet"
+		class="fg.eternity.spring.FieldSet">
+		<constructor-arg >
+			<ref bean="config" />
+		</constructor-arg>
+	</bean>
+	
+	<bean id="config"
+		  class="fg.eternity.Config" init-method="init">
+		<property name="dimX" value="16"/>
+		<property name="dimY" value="16"/>
+		<property name="patternCount" value="22"/>
+	</bean>
+	
+	<bean id="mainTable"
+		  class="fg.eternity.plan.PlanSet" init-method="init">
+		<property name="config">
+			<ref bean="config" />
+		</property>
+		<property name="fieldSet">
+			<ref bean="fieldSet" />
+		</property>
+		<property name="figureSet">
+			<ref bean="figureSet" />
+		</property>
+		<property name="defaults"   >
+			<value>
+				<![CDATA[I8<fkrf>^1,N3<kpfu>^2,N14<duol>^3,C14<pvtv>^2,C3<svck>^2]]>
+			</value>
+		</property>
+	</bean>
+	
+	<bean id="logger"
+		class="fg.eternity.plan.PlanLogger">
+		<property name="first">
+			<ref bean="mainRoute" />
+		</property>
+		<property name="loggerName" value="LOGGER"/>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+
+	<bean id="bingo"
+		class="fg.eternity.plan.Bingo">
+		<property name="first">
+			<ref bean="mainRoute" />
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+	
+	<bean id="endless"
+		class="fg.eternity.plan.PlanEndless">
+	</bean>
+
+	<bean id="once"
+		class="fg.eternity.plan.PlanOnce">
+		<property name="first">
+			<ref bean="mainRoute" />
+		</property>
+	</bean>
+
+
+</beans>
