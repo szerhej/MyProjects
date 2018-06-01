@@ -8,11 +8,11 @@ package fg.eternity.plan;
 
 
 
-import fg.eternity.Field;
-import fg.eternity.Figure;
-import fg.eternity.FieldVector;
-import fg.eternity.FigureVector;
-import fg.eternity.Utility;
+import fg.eternity.bo.Field;
+import fg.eternity.bo.Figure;
+import fg.eternity.bo.FieldVector;
+import fg.eternity.bo.FigureVector;
+import fg.eternity.util.Utility;
 import fg.eternity.validator.Validator;
 import lombok.Getter;
 import lombok.Setter;

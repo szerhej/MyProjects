@@ -1,0 +1,1028 @@
+{
+  "figures": [
+    {
+      "id": 1,
+      "value": "aq**"
+    },
+    {
+      "id": 2,
+      "value": "ae**"
+    },
+    {
+      "id": 3,
+      "value": "iq**"
+    },
+    {
+      "id": 4,
+      "value": "qi**"
+    },
+    {
+      "id": 5,
+      "value": "ba*a"
+    },
+    {
+      "id": 6,
+      "value": "ji*a"
+    },
+    {
+      "id": 7,
+      "value": "fa*a"
+    },
+    {
+      "id": 8,
+      "value": "fm*a"
+    },
+    {
+      "id": 9,
+      "value": "kq*a"
+    },
+    {
+      "id": 10,
+      "value": "ge*a"
+    },
+    {
+      "id": 11,
+      "value": "oi*a"
+    },
+    {
+      "id": 12,
+      "value": "he*a"
+    },
+    {
+      "id": 13,
+      "value": "hm*a"
+    },
+    {
+      "id": 14,
+      "value": "ue*a"
+    },
+    {
+      "id": 15,
+      "value": "ja*i"
+    },
+    {
+      "id": 16,
+      "value": "rq*i"
+    },
+    {
+      "id": 17,
+      "value": "nm*i"
+    },
+    {
+      "id": 18,
+      "value": "sm*i"
+    },
+    {
+      "id": 19,
+      "value": "gi*i"
+    },
+    {
+      "id": 20,
+      "value": "oi*i"
+    },
+    {
+      "id": 21,
+      "value": "de*i"
+    },
+    {
+      "id": 22,
+      "value": "la*i"
+    },
+    {
+      "id": 23,
+      "value": "lm*i"
+    },
+    {
+      "id": 24,
+      "value": "ta*i"
+    },
+    {
+      "id": 25,
+      "value": "ua*i"
+    },
+    {
+      "id": 26,
+      "value": "bi*q"
+    },
+    {
+      "id": 27,
+      "value": "bq*q"
+    },
+    {
+      "id": 28,
+      "value": "jq*q"
+    },
+    {
+      "id": 29,
+      "value": "rq*q"
+    },
+    {
+      "id": 30,
+      "value": "gm*q"
+    },
+    {
+      "id": 31,
+      "value": "oi*q"
+    },
+    {
+      "id": 32,
+      "value": "tq*q"
+    },
+    {
+      "id": 33,
+      "value": "hi*q"
+    },
+    {
+      "id": 34,
+      "value": "he*q"
+    },
+    {
+      "id": 35,
+      "value": "pm*q"
+    },
+    {
+      "id": 36,
+      "value": "ve*q"
+    },
+    {
+      "id": 37,
+      "value": "ra*e"
+    },
+    {
+      "id": 38,
+      "value": "cm*e"
+    },
+    {
+      "id": 39,
+      "value": "km*e"
+    },
+    {
+      "id": 40,
+      "value": "si*e"
+    },
+    {
+      "id": 41,
+      "value": "sq*e"
+    },
+    {
+      "id": 42,
+      "value": "oa*e"
+    },
+    {
+      "id": 43,
+      "value": "oi*e"
+    },
+    {
+      "id": 44,
+      "value": "oq*e"
+    },
+    {
+      "id": 45,
+      "value": "da*e"
+    },
+    {
+      "id": 46,
+      "value": "te*e"
+    },
+    {
+      "id": 47,
+      "value": "he*e"
+    },
+    {
+      "id": 48,
+      "value": "pe*e"
+    },
+    {
+      "id": 49,
+      "value": "bm*m"
+    },
+    {
+      "id": 50,
+      "value": "ja*m"
+    },
+    {
+      "id": 51,
+      "value": "ji*m"
+    },
+    {
+      "id": 52,
+      "value": "fa*m"
+    },
+    {
+      "id": 53,
+      "value": "ge*m"
+    },
+    {
+      "id": 54,
+      "value": "de*m"
+    },
+    {
+      "id": 55,
+      "value": "dm*m"
+    },
+    {
+      "id": 56,
+      "value": "hq*m"
+    },
+    {
+      "id": 57,
+      "value": "pa*m"
+    },
+    {
+      "id": 58,
+      "value": "pm*m"
+    },
+    {
+      "id": 59,
+      "value": "ui*m"
+    },
+    {
+      "id": 60,
+      "value": "vq*m"
+    },
+    {
+      "id": 61,
+      "value": "frbb"
+    },
+    {
+      "id": 62,
+      "value": "ngbb"
+    },
+    {
+      "id": 63,
+      "value": "jcbj"
+    },
+    {
+      "id": 64,
+      "value": "bhbr"
+    },
+    {
+      "id": 65,
+      "value": "rvbr"
+    },
+    {
+      "id": 66,
+      "value": "nnbr"
+    },
+    {
+      "id": 67,
+      "value": "kjbr"
+    },
+    {
+      "id": 68,
+      "value": "tfbr"
+    },
+    {
+      "id": 69,
+      "value": "vhbr"
+    },
+    {
+      "id": 70,
+      "value": "cgbc"
+    },
+    {
+      "id": 71,
+      "value": "glbc"
+    },
+    {
+      "id": 72,
+      "value": "nrbk"
+    },
+    {
+      "id": 73,
+      "value": "odbk"
+    },
+    {
+      "id": 74,
+      "value": "tobk"
+    },
+    {
+      "id": 75,
+      "value": "hcbk"
+    },
+    {
+      "id": 76,
+      "value": "nobs"
+    },
+    {
+      "id": 77,
+      "value": "sobs"
+    },
+    {
+      "id": 78,
+      "value": "cpbg"
+    },
+    {
+      "id": 79,
+      "value": "tcbg"
+    },
+    {
+      "id": 80,
+      "value": "pubg"
+    },
+    {
+      "id": 81,
+      "value": "srbo"
+    },
+    {
+      "id": 82,
+      "value": "rrbd"
+    },
+    {
+      "id": 83,
+      "value": "kdbd"
+    },
+    {
+      "id": 84,
+      "value": "rsbl"
+    },
+    {
+      "id": 85,
+      "value": "fnbl"
+    },
+    {
+      "id": 86,
+      "value": "hlbl"
+    },
+    {
+      "id": 87,
+      "value": "ptbl"
+    },
+    {
+      "id": 88,
+      "value": "bubt"
+    },
+    {
+      "id": 89,
+      "value": "fvbt"
+    },
+    {
+      "id": 90,
+      "value": "dpbt"
+    },
+    {
+      "id": 91,
+      "value": "klbh"
+    },
+    {
+      "id": 92,
+      "value": "sobh"
+    },
+    {
+      "id": 93,
+      "value": "sdbh"
+    },
+    {
+      "id": 94,
+      "value": "dubh"
+    },
+    {
+      "id": 95,
+      "value": "lnbh"
+    },
+    {
+      "id": 96,
+      "value": "ucbu"
+    },
+    {
+      "id": 97,
+      "value": "dsbv"
+    },
+    {
+      "id": 98,
+      "value": "thbv"
+    },
+    {
+      "id": 99,
+      "value": "ufbv"
+    },
+    {
+      "id": 100,
+      "value": "vubv"
+    },
+    {
+      "id": 101,
+      "value": "lojj"
+    },
+    {
+      "id": 102,
+      "value": "lpjj"
+    },
+    {
+      "id": 103,
+      "value": "psjj"
+    },
+    {
+      "id": 104,
+      "value": "vfjj"
+    },
+    {
+      "id": 105,
+      "value": "dojr"
+    },
+    {
+      "id": 106,
+      "value": "chjf"
+    },
+    {
+      "id": 107,
+      "value": "shjf"
+    },
+    {
+      "id": 108,
+      "value": "dojf"
+    },
+    {
+      "id": 109,
+      "value": "pkjf"
+    },
+    {
+      "id": 110,
+      "value": "oljn"
+    },
+    {
+      "id": 111,
+      "value": "lojn"
+    },
+    {
+      "id": 112,
+      "value": "tsjc"
+    },
+    {
+      "id": 113,
+      "value": "tpjc"
+    },
+    {
+      "id": 114,
+      "value": "ndjk"
+    },
+    {
+      "id": 115,
+      "value": "gljk"
+    },
+    {
+      "id": 116,
+      "value": "lkjk"
+    },
+    {
+      "id": 117,
+      "value": "vpjk"
+    },
+    {
+      "id": 118,
+      "value": "cujs"
+    },
+    {
+      "id": 119,
+      "value": "pljg"
+    },
+    {
+      "id": 120,
+      "value": "hvjo"
+    },
+    {
+      "id": 121,
+      "value": "nvjd"
+    },
+    {
+      "id": 122,
+      "value": "fpjt"
+    },
+    {
+      "id": 123,
+      "value": "nsjt"
+    },
+    {
+      "id": 124,
+      "value": "tojt"
+    },
+    {
+      "id": 125,
+      "value": "lvjh"
+    },
+    {
+      "id": 126,
+      "value": "uojh"
+    },
+    {
+      "id": 127,
+      "value": "nfjp"
+    },
+    {
+      "id": 128,
+      "value": "sujp"
+    },
+    {
+      "id": 129,
+      "value": "dcjp"
+    },
+    {
+      "id": 130,
+      "value": "thjp"
+    },
+    {
+      "id": 131,
+      "value": "ftju"
+    },
+    {
+      "id": 132,
+      "value": "lnju"
+    },
+    {
+      "id": 133,
+      "value": "npjv"
+    },
+    {
+      "id": 134,
+      "value": "kdjv"
+    },
+    {
+      "id": 135,
+      "value": "dcjv"
+    },
+    {
+      "id": 136,
+      "value": "ptjv"
+    },
+    {
+      "id": 137,
+      "value": "tgrr"
+    },
+    {
+      "id": 138,
+      "value": "fcrf"
+    },
+    {
+      "id": 139,
+      "value": "fkrf"
+    },
+    {
+      "id": 140,
+      "value": "flrf"
+    },
+    {
+      "id": 141,
+      "value": "surf"
+    },
+    {
+      "id": 142,
+      "value": "ofrf"
+    },
+    {
+      "id": 143,
+      "value": "plrf"
+    },
+    {
+      "id": 144,
+      "value": "uurf"
+    },
+    {
+      "id": 145,
+      "value": "cdrn"
+    },
+    {
+      "id": 146,
+      "value": "rlrc"
+    },
+    {
+      "id": 147,
+      "value": "rvrc"
+    },
+    {
+      "id": 148,
+      "value": "cnrc"
+    },
+    {
+      "id": 149,
+      "value": "olrc"
+    },
+    {
+      "id": 150,
+      "value": "fkrs"
+    },
+    {
+      "id": 151,
+      "value": "dvrs"
+    },
+    {
+      "id": 152,
+      "value": "kkrg"
+    },
+    {
+      "id": 153,
+      "value": "ksrg"
+    },
+    {
+      "id": 154,
+      "value": "vprg"
+    },
+    {
+      "id": 155,
+      "value": "ggrd"
+    },
+    {
+      "id": 156,
+      "value": "glrd"
+    },
+    {
+      "id": 157,
+      "value": "vgrd"
+    },
+    {
+      "id": 158,
+      "value": "gprt"
+    },
+    {
+      "id": 159,
+      "value": "hfrt"
+    },
+    {
+      "id": 160,
+      "value": "uurh"
+    },
+    {
+      "id": 161,
+      "value": "ftrp"
+    },
+    {
+      "id": 162,
+      "value": "ntrp"
+    },
+    {
+      "id": 163,
+      "value": "okrv"
+    },
+    {
+      "id": 164,
+      "value": "dprv"
+    },
+    {
+      "id": 165,
+      "value": "cdfn"
+    },
+    {
+      "id": 166,
+      "value": "dhfn"
+    },
+    {
+      "id": 167,
+      "value": "ccfk"
+    },
+    {
+      "id": 168,
+      "value": "kofs"
+    },
+    {
+      "id": 169,
+      "value": "sufs"
+    },
+    {
+      "id": 170,
+      "value": "dhfg"
+    },
+    {
+      "id": 171,
+      "value": "tpfg"
+    },
+    {
+      "id": 172,
+      "value": "ukfg"
+    },
+    {
+      "id": 173,
+      "value": "oofo"
+    },
+    {
+      "id": 174,
+      "value": "ltfo"
+    },
+    {
+      "id": 175,
+      "value": "gufd"
+    },
+    {
+      "id": 176,
+      "value": "gsfl"
+    },
+    {
+      "id": 177,
+      "value": "ndft"
+    },
+    {
+      "id": 178,
+      "value": "lpfh"
+    },
+    {
+      "id": 179,
+      "value": "hofh"
+    },
+    {
+      "id": 180,
+      "value": "gpfp"
+    },
+    {
+      "id": 181,
+      "value": "kpfu"
+    },
+    {
+      "id": 182,
+      "value": "gkfu"
+    },
+    {
+      "id": 183,
+      "value": "shnn"
+    },
+    {
+      "id": 184,
+      "value": "vgnc"
+    },
+    {
+      "id": 185,
+      "value": "slnk"
+    },
+    {
+      "id": 186,
+      "value": "hhnk"
+    },
+    {
+      "id": 187,
+      "value": "ugns"
+    },
+    {
+      "id": 188,
+      "value": "nung"
+    },
+    {
+      "id": 189,
+      "value": "csng"
+    },
+    {
+      "id": 190,
+      "value": "psng"
+    },
+    {
+      "id": 191,
+      "value": "ccno"
+    },
+    {
+      "id": 192,
+      "value": "otno"
+    },
+    {
+      "id": 193,
+      "value": "kgnd"
+    },
+    {
+      "id": 194,
+      "value": "uknl"
+    },
+    {
+      "id": 195,
+      "value": "uvnl"
+    },
+    {
+      "id": 196,
+      "value": "vonl"
+    },
+    {
+      "id": 197,
+      "value": "kvnt"
+    },
+    {
+      "id": 198,
+      "value": "shnt"
+    },
+    {
+      "id": 199,
+      "value": "ttnt"
+    },
+    {
+      "id": 200,
+      "value": "scnh"
+    },
+    {
+      "id": 201,
+      "value": "uhnp"
+    },
+    {
+      "id": 202,
+      "value": "vgnp"
+    },
+    {
+      "id": 203,
+      "value": "lsnu"
+    },
+    {
+      "id": 204,
+      "value": "lhnu"
+    },
+    {
+      "id": 205,
+      "value": "pcnu"
+    },
+    {
+      "id": 206,
+      "value": "vunu"
+    },
+    {
+      "id": 207,
+      "value": "vgcc"
+    },
+    {
+      "id": 208,
+      "value": "svck"
+    },
+    {
+      "id": 209,
+      "value": "hock"
+    },
+    {
+      "id": 210,
+      "value": "kscg"
+    },
+    {
+      "id": 211,
+      "value": "pocg"
+    },
+    {
+      "id": 212,
+      "value": "cpco"
+    },
+    {
+      "id": 213,
+      "value": "hhcd"
+    },
+    {
+      "id": 214,
+      "value": "ctcl"
+    },
+    {
+      "id": 215,
+      "value": "dvcl"
+    },
+    {
+      "id": 216,
+      "value": "vucl"
+    },
+    {
+      "id": 217,
+      "value": "soct"
+    },
+    {
+      "id": 218,
+      "value": "dlcp"
+    },
+    {
+      "id": 219,
+      "value": "kdcu"
+    },
+    {
+      "id": 220,
+      "value": "kpcv"
+    },
+    {
+      "id": 221,
+      "value": "uucv"
+    },
+    {
+      "id": 222,
+      "value": "uvcv"
+    },
+    {
+      "id": 223,
+      "value": "lvkk"
+    },
+    {
+      "id": 224,
+      "value": "tgkk"
+    },
+    {
+      "id": 225,
+      "value": "pokk"
+    },
+    {
+      "id": 226,
+      "value": "sokg"
+    },
+    {
+      "id": 227,
+      "value": "llkg"
+    },
+    {
+      "id": 228,
+      "value": "shkd"
+    },
+    {
+      "id": 229,
+      "value": "gvkt"
+    },
+    {
+      "id": 230,
+      "value": "phkt"
+    },
+    {
+      "id": 231,
+      "value": "ltkh"
+    },
+    {
+      "id": 232,
+      "value": "lukh"
+    },
+    {
+      "id": 233,
+      "value": "stss"
+    },
+    {
+      "id": 234,
+      "value": "pdsg"
+    },
+    {
+      "id": 235,
+      "value": "gdsd"
+    },
+    {
+      "id": 236,
+      "value": "gtsd"
+    },
+    {
+      "id": 237,
+      "value": "losd"
+    },
+    {
+      "id": 238,
+      "value": "dpsl"
+    },
+    {
+      "id": 239,
+      "value": "ovst"
+    },
+    {
+      "id": 240,
+      "value": "uost"
+    },
+    {
+      "id": 241,
+      "value": "gush"
+    },
+    {
+      "id": 242,
+      "value": "dush"
+    },
+    {
+      "id": 243,
+      "value": "olgo"
+    },
+    {
+      "id": 244,
+      "value": "thgo"
+    },
+    {
+      "id": 245,
+      "value": "vtgd"
+    },
+    {
+      "id": 246,
+      "value": "pvgu"
+    },
+    {
+      "id": 247,
+      "value": "uvoo"
+    },
+    {
+      "id": 248,
+      "value": "ldod"
+    },
+    {
+      "id": 249,
+      "value": "duol"
+    },
+    {
+      "id": 250,
+      "value": "puot"
+    },
+    {
+      "id": 251,
+      "value": "vhdd"
+    },
+    {
+      "id": 252,
+      "value": "hldl"
+    },
+    {
+      "id": 253,
+      "value": "ptlh"
+    },
+    {
+      "id": 254,
+      "value": "uptp"
+    },
+    {
+      "id": 255,
+      "value": "pvtv"
+    },
+    {
+      "id": 256,
+      "value": "uvhv"
+    }
+  ]
+}

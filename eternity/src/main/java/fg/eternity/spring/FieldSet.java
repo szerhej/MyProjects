@@ -6,8 +6,8 @@
  */
 package fg.eternity.spring;
 
-import fg.eternity.Config;
-import fg.eternity.Field;
+import fg.eternity.bo.Config;
+import fg.eternity.bo.Field;
 
 /**
  * @author gxfulop

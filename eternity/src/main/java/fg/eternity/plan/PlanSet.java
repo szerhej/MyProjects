@@ -9,10 +9,10 @@ package fg.eternity.plan;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import fg.eternity.Config;
-import fg.eternity.Field;
-import fg.eternity.Figure;
-import fg.eternity.FigureVector;
+import fg.eternity.bo.Config;
+import fg.eternity.bo.Field;
+import fg.eternity.bo.Figure;
+import fg.eternity.bo.FigureVector;
 import fg.eternity.spring.FieldSet;
 import fg.eternity.spring.FigureSet;
 

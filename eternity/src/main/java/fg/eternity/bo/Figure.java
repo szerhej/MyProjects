@@ -4,8 +4,9 @@
  * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
-package fg.eternity;
+package fg.eternity.bo;
 
+import fg.eternity.util.Utility;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
@@ -213,7 +214,7 @@ public class Figure {
             ret += PATTERNS[is[i]];
         }
         idIndex = (idIndex + 1) % ids.length;
-        return "(" + (ids[idIndex] + 1) + ")<" + ret + ">";
+        return "(" + (ids[idIndex]) + ")<" + ret + ">";
     }
 
     public static String toString(Figure[] figures) {

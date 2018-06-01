@@ -6,9 +6,9 @@
  */
 package fg.eternity.plan;
 
-import fg.eternity.Field;
-import fg.eternity.FieldVector;
-import fg.eternity.Figure;
+import fg.eternity.bo.Field;
+import fg.eternity.bo.FieldVector;
+import fg.eternity.bo.Figure;
 import lombok.Getter;
 import lombok.Setter;
 

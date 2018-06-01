@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import fg.eternity.Field;
+import fg.eternity.bo.Field;
 import fg.eternity.plan.IPlan;
 import fg.eternity.plan.IPlanChainable;
 import fg.eternity.plan.IPlanChained;

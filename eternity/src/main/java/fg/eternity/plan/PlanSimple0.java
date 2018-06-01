@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 
-import fg.eternity.Field;
-import fg.eternity.Figure;
-import fg.eternity.FigureVector;
+import fg.eternity.bo.Field;
+import fg.eternity.bo.Figure;
+import fg.eternity.bo.FigureVector;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;

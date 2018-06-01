@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body ng-app="eternityApp" ng-controller="todoCtrl">
+
+<div class="container">
+    <div class="row" ng-repeat="y in elementList">
+        <div name="{{x.fieldTxt}}" class="col-sm-1" ng-repeat="x in y" style="width:unset;padding-right: 0px;padding-left: 0px;">
+            <img src="images/{{ x.id }}.png" width="50" height="50" style="transform:rotate({{ x.rotation }}deg);">
+        </div>
+    </div>
+</div>
+
+<script>
+var app = angular.module('eternityApp', []);
+app.controller('todoCtrl', function($scope, $http) {
+
+$http.get("/services/board/boardId").then(function (response) {
+      $scope.elementList = response.data;
+  });
+});
+</script>
+
+
+</body>
+</html>

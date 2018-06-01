@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 
 
-import fg.eternity.Config;
-import fg.eternity.Field;
+import fg.eternity.bo.Config;
+import fg.eternity.bo.Field;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;

@@ -6,10 +6,10 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
 
-import fg.eternity.Field;
-import fg.eternity.Figure;
-import fg.eternity.FigureVector;
-import fg.eternity.Utility;
+import fg.eternity.bo.Field;
+import fg.eternity.bo.Figure;
+import fg.eternity.bo.FigureVector;
+import fg.eternity.util.Utility;
 
 public class IndexMap {
 

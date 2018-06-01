@@ -14,7 +14,7 @@ import java.util.Random;
 
 
 
-import fg.eternity.Figure;
+import fg.eternity.bo.Figure;
 
 /**
  * @author gxfulop

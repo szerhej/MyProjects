@@ -6,7 +6,7 @@
  */
 package fg.eternity.plan;
 
-import fg.eternity.Field;
+import fg.eternity.bo.Field;
 
 /**
  * @author gxfulop

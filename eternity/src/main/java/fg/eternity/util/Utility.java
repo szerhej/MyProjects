@@ -4,8 +4,15 @@
  * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
-package fg.eternity;
+package fg.eternity.util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import fg.eternity.bo.FigureDTO;
+import lombok.Data;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -62,6 +69,21 @@ public abstract class Utility {
             }
         }
 
+    }
+
+    @Data
+    public static class FigureHolder{
+        private List<FigureDTO> figures;
+    };
+
+    public static Map<Integer,String> loadFigures(){
+        ObjectMapper objectMapper=new ObjectMapper();
+        return LangUtils.sneakyThrows(() -> {
+            FigureHolder figureHolder = objectMapper.readValue(LangUtils.getResource("/fg/eternity/config/figures.json"),FigureHolder.class);
+            Map<Integer,String> ret = new HashMap<>(figureHolder.figures.size());
+            figureHolder.figures.forEach(figureDTO -> ret.put(figureDTO.getId(),figureDTO.getValue()));
+            return ret;
+        });
     }
 
 }
