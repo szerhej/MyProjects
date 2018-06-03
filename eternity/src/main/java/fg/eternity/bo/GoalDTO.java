@@ -10,6 +10,8 @@ import java.util.Date;
 @NoArgsConstructor
 public class GoalDTO {
     @NonNull
+    private String id;
+    @NonNull
     private String name;
     @NonNull
     private String boardTxt;

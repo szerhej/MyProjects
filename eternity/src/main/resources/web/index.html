@@ -6,7 +6,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body ng-app="eternityApp" ng-controller="todoCtrl">
 
-<div class="container">
+<select>
+    <option ng-repeat="x in boardList" ng-click="getDetails(x.id)">{{x.id}}</option>
+</select>
+
+<div class="container" ng-show="elementList!=null">
     <div class="row" ng-repeat="y in elementList">
         <div name="{{x.fieldTxt}}" class="col-sm-1" ng-repeat="x in y" style="width:unset;padding-right: 0px;padding-left: 0px;">
             <img src="images/{{ x.id }}.png" width="50" height="50" style="transform:rotate({{ x.rotation }}deg);">
@@ -18,9 +22,19 @@
 var app = angular.module('eternityApp', []);
 app.controller('todoCtrl', function($scope, $http) {
 
-$http.get("/services/board/boardId").then(function (response) {
-      $scope.elementList = response.data;
+$http.get("/services/boards").then(function (response) {
+      $scope.boardList = response.data;
   });
+
+$scope.elementList = null;
+
+$scope.getDetails = function(boardId) {
+    $scope.bookingPanel = false
+    $http.get("/services/boards/"+boardId).then(function (response) {
+          $scope.elementList = response.data;
+      });
+   };
+
 });
 </script>
 
