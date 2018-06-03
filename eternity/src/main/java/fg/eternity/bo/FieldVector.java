@@ -9,13 +9,15 @@ package fg.eternity.bo;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * @author gxfulop
  * 
  * TODO To change the template for this generated type comment go to Window -
  * Preferences - Java - Code Style - Code Templates
  */
-public class FieldVector {
+public class FieldVector implements Serializable {
 
     @Setter @Getter
     private Field fieldFrom;

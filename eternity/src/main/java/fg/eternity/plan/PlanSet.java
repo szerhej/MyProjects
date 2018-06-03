@@ -6,6 +6,7 @@
  */
 package fg.eternity.plan;
 
+import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,6 +16,7 @@ import fg.eternity.bo.Figure;
 import fg.eternity.bo.FigureVector;
 import fg.eternity.spring.FieldSet;
 import fg.eternity.spring.FigureSet;
+import fg.eternity.util.BoardParser;
 
 /**
  * @author gxfulop
@@ -22,7 +24,7 @@ import fg.eternity.spring.FigureSet;
  * TODO To change the template for this generated type comment go to Window -
  * Preferences - Java - Code Style - Code Templates
  */
-public class PlanSet {
+public class PlanSet implements Serializable {
 	private int[] figureCount;
 
 	private FigureVector[] fieldOccupation;
@@ -127,19 +129,16 @@ public class PlanSet {
 		this.figures = figureSet.getFigures();
 	}
 
-	private static Pattern pattern = Pattern
-			.compile("([A-Z]\\d{1,2})(\\<[a-z][a-z][a-z][a-z]\\>)\\^([0-3])");
-
 	public void setDefaults(String defaults) {
 		this.defaults = defaults;
 	}
 
 	private void initDefaults() {
-		Matcher matcher = pattern.matcher(defaults);
+		Matcher matcher = BoardParser.FIGURE_PARSER.matcher(defaults);
 		while (matcher.find()) {
 			String fieldName = matcher.group(1);
-			String figureName = matcher.group(2);
-			String figureIndex = matcher.group(3);
+			String figureName = "<"+matcher.group(3)+">";
+			String figureIndex = matcher.group(4);
 			Field field = null;
 			Figure figure = null;
 			field = Field.getField(fieldName.toUpperCase(), fields);
@@ -160,11 +159,11 @@ public class PlanSet {
 						+ figureName);
 			}
 
-			field.setVector(FigureVector.get(figure, new Integer(figureIndex)
+			field.setVector(FigureVector.get(figure, Integer.valueOf(figureIndex)
 					.intValue()));
 			figureCount[figure.getId()]--;
 			fieldOccupation[field.getPos()] = FigureVector.get(figure,
-					new Integer(figureIndex).intValue());
+					Integer.valueOf(figureIndex).intValue());
 
 		}
 

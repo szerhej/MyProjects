@@ -9,6 +9,7 @@ package fg.eternity.bo;
 import fg.eternity.util.Utility;
 import lombok.extern.slf4j.Slf4j;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -25,7 +26,7 @@ import java.util.regex.Pattern;
  * Preferences - Java - Code Style - Code Templates
  */
 @Slf4j
-public class Figure {
+public class Figure implements Serializable {
 
     public final static Figure ETALONFIGURE = new Figure();
 

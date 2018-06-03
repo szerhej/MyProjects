@@ -8,6 +8,7 @@ import fg.eternity.validator.Validator;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.annotation.PostConstruct;
 import java.util.*;
@@ -18,7 +19,8 @@ public class BoardParser {
 
     private List<Field> fields;
 
-    private String defaults="I8(139)<fkrf>^1,N3(181)<kpfu>^2,N14(249)<duol>^3,C14(255)<pvtv>^2,C3(208)<svck>^2";
+    @Value("${fg.eternity.defaults}")
+    private String defaults;
 
     @Autowired
     @Setter
@@ -29,7 +31,7 @@ public class BoardParser {
         fields = Arrays.asList(Field.generateAllFields(config));
     }
 
-    private static final Pattern FIGURE_PARSER = Pattern.compile("(\\w\\d{1,2})\\((\\d{1,3})\\)\\<(.{4})\\>\\^(\\d)");
+    public static final Pattern FIGURE_PARSER = Pattern.compile("(\\w\\d{1,2})\\((\\d{1,3})\\)\\<(.{4})\\>\\^(\\d)");
 
     public List<List<FigureVectorDTO>> parse(String boardStr) {
         Matcher matcher = FIGURE_PARSER.matcher(defaults+","+boardStr);

@@ -10,13 +10,15 @@ import fg.eternity.plan.IPlan;
 import fg.eternity.plan.IPlanSimple;
 import org.apache.commons.beanutils.PropertyUtils;
 
+import java.io.Serializable;
+
 /**
  * @author gxfulop
  * 
  * TODO To change the template for this generated type comment go to Window -
  * Preferences - Java - Code Style - Code Templates
  */
-public class Field implements Comparable {
+public class Field implements Comparable,Serializable {
 
 	public final static Field[] NULLARRAY = {};
 

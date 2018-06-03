@@ -1,14 +1,21 @@
 package fg.eternity.plan;
 
-import java.util.Arrays;
-
-
-
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import fg.eternity.bo.Config;
 import fg.eternity.bo.Field;
+import fg.eternity.bo.GoalDTO;
+import fg.eternity.util.LangUtils;
+import fg.eternity.validator.Validator;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
 
 /**
  * @author gxfulop
@@ -47,6 +54,12 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 	@Setter @Getter
 	private IPlan first;
 
+	@Setter @Getter
+	private boolean logToTargetFolder;
+	@Setter @Getter
+	private String targetFolder;
+
+
 	protected void logPlan() {
 
 		ILabelled[] labelleds = PlanHelper.getAllLabelled(first);
@@ -77,6 +90,9 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 	}
 
 	public IRun compile(IndexMap indexMap, int level) {
+		ObjectMapper objectMapper = new ObjectMapper();
+		objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+		Validator.isTrue(!logToTargetFolder||targetFolder!=null,"Target folder is mandatory");
 		final IRun run = next.compile(indexMap, level);
 		return () ->  {
 				Arrays.fill(oldAllCounts, 0);
@@ -90,9 +106,10 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 					oldTryCount += oldTryCounts[i];
 					oldAllCount += oldAllCounts[i];
 				}
+				String boardTxt = Field.toString(planSet.getFields(), planSet
+					.getFieldOccupation());
 				log.info(
-						"{} [{}]/[{}]]=== branch started:::::{}",loggerName,oldAllCount,oldTryCount,Field.toString(planSet.getFields(), planSet
-								.getFieldOccupation()));
+						"{} [{}]/[{}] branch started =>{}",loggerName,oldAllCount,oldTryCount,boardTxt);
 
 				long lastTime = System.currentTimeMillis();
 
@@ -112,7 +129,7 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 					newAllCount += newAllCounts[i];
 				}
 				log.info(
-						"{} [{}/{}]=== branch ended",loggerName,newAllCount,newTryCount);
+						"{} [{}/{}] branch ended",loggerName,newAllCount,newTryCount);
 
 				//Speed
 				try {
@@ -135,6 +152,23 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 				absoluteLevel = maxLev;
 
 				logPlan();
+
+
+			if(logToTargetFolder){
+				GoalDTO goalDTO =new GoalDTO();
+				goalDTO.setBoardTxt(boardTxt);
+				goalDTO.setName(loggerName);
+				goalDTO.setAbsoluteLevel(absoluteLevel);
+				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+
+				File file = new File(new File(targetFolder),"data"+dateFormat.format(new Date())+".json");
+				LangUtils.sneakyThrows(() -> {
+					try(FileOutputStream fo= new FileOutputStream(file)){
+						fo.write(objectMapper.writeValueAsString(goalDTO).getBytes());
+					}
+				});
+			}
+
 		};
 	}
 
@@ -166,4 +200,6 @@ public class PlanLogger implements IPlanChainable, ILabelled {
 	public String getLabel() {
 		return loggerName;
 	}
+
+
 }

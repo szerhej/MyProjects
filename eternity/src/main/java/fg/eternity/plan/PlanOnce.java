@@ -35,7 +35,7 @@ public class PlanOnce implements IPlanChainable {
                     plan.stop();
                 }
             } catch (Exception e) {
-                throw new RuntimeException();
+                throw new RuntimeException(e);
             }
         };
     }

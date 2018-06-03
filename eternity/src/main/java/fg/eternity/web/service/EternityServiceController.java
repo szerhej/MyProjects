@@ -55,7 +55,7 @@ public class EternityServiceController {
      */
     @RequestMapping(value = "/board/{boardId}", method = RequestMethod.GET)
     public @ResponseBody List<List<FigureVectorDTO>> queryBoard(@PathVariable(name = "boardId") String boardId) throws Exception {
-        try(InputStream inputStream = new FileInputStream("/media/szergej/abd5d58a-ed2e-4bd0-82a3-cb5ea759edc7/workspace/MyProjects/eternity/data/data201805311518.json")){
+        try(InputStream inputStream = new FileInputStream("/media/szergej/abd5d58a-ed2e-4bd0-82a3-cb5ea759edc7/workspace/MyProjects/eternity/data/data20180603120743834.json")){
             GoalDTO goalDTO = objectMapper.readValue(IOUtils.toString(inputStream,"UTF8"),GoalDTO.class);
             return boardParser.parse(goalDTO.getBoardTxt());
         }

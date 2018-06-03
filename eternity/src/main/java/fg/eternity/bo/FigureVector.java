@@ -6,6 +6,7 @@
  */
 package fg.eternity.bo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * TODO To change the template for this generated type comment go to Window -
  * Preferences - Java - Code Style - Code Templates
  */
-public class FigureVector {
+public class FigureVector implements Serializable {
     private Figure figure;
 
     private int index;
