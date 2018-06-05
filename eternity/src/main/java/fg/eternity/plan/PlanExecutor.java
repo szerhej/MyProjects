@@ -8,14 +8,13 @@ package fg.eternity.plan;
 
 import fg.eternity.util.LangUtils;
 import fg.eternity.validator.Validator;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -37,22 +36,19 @@ public class PlanExecutor implements IPlan,IPlanChainable {
 	@Getter @Setter
 	private IPlan next;
 
+	@Data
+	@AllArgsConstructor
+	private static class IntegratedData implements Serializable {
+		IPlan first;
+		IndexMap indexMap;
+	}
+
 	public IRun compile(IndexMap indexMap, int level) {
 		Validator.notNull(executor,"executor cannot be null!!!");
 		next.compile(indexMap,level);
 		return () ->  {
-			final byte[] serializedBoard = LangUtils.sneakyThrows(() -> {
-				try(ByteArrayOutputStream os=new ByteArrayOutputStream(); ObjectOutputStream objectOutputStream = new ObjectOutputStream(os)){
-					objectOutputStream.writeObject(first);
-					return os.toByteArray();
-				}
-			});
-
-			IPlan iPlan = LangUtils.sneakyThrows(() -> {
-				try(ByteArrayInputStream is=new ByteArrayInputStream(serializedBoard); ObjectInputStream objectInputStream = new ObjectInputStream(is);  ){
-					return (IPlan)objectInputStream.readObject();
-				}
-			});
+			IntegratedData integratedData = LangUtils.deepCopy(new IntegratedData(first,indexMap));
+			IPlan iPlan = integratedData.getFirst();
 
 			for(;iPlan!=null && !(iPlan instanceof PlanExecutor);iPlan = ((IPlanChained)iPlan).getNext());
 
@@ -61,7 +57,7 @@ public class PlanExecutor implements IPlan,IPlanChainable {
 
 			PlanExecutor planExecutor = (PlanExecutor) iPlan;
 
-			final IRun run = planExecutor.next.compile(indexMap, level);
+			final IRun run = planExecutor.next.compile(integratedData.indexMap, level);
 
 			executor.execute(run::call);
 

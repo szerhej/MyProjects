@@ -1,10 +1,11 @@
 package fg.eternity.util;
 
 import fg.eternity.exception.AppException;
+import fg.eternity.plan.IPlan;
 import fg.eternity.validator.ValidationException;
 import org.apache.commons.io.IOUtils;
 
-import java.io.InputStream;
+import java.io.*;
 
 /**
  * Helper class to share often used methods
@@ -84,6 +85,21 @@ public class LangUtils {
             //Transfer unknown exception to unchecked AppException
             throw new AppException(e);
         }
+    }
+
+    public static <T> T deepCopy(T toCopy){
+        final byte[] serializedObject = sneakyThrows(() -> {
+            try(ByteArrayOutputStream os=new ByteArrayOutputStream(); ObjectOutputStream objectOutputStream = new ObjectOutputStream(os)){
+                objectOutputStream.writeObject(toCopy);
+                return os.toByteArray();
+            }
+        });
+
+        return sneakyThrows(() -> {
+            try(ByteArrayInputStream is=new ByteArrayInputStream(serializedObject); ObjectInputStream objectInputStream = new ObjectInputStream(is);  ){
+                return (T)objectInputStream.readObject();
+            }
+        });
     }
 
 }

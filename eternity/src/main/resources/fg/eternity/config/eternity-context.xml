@@ -68,6 +68,7 @@
 				<ref bean="final3"/>
 				<ref bean="final6"/>
 				<ref bean="final7"/>
+				<ref bean="final8"/>
 			</list>
 		</property>
 	</bean>
@@ -197,6 +198,32 @@
 			<ref bean="mainTable" />
 		</property>
 	</bean>
+
+	<bean id="final8"
+		  class="fg.eternity.spring.RouteDefinition">
+		<property name="route">
+			<list>
+				<value>{H1},{H2},{G1},{G2},{F1},{F2},{E1},{E2},{D1},{D2},{C1},{C2},{B1},{B2},{A1},{A2},{A3},{B3},{A4},{B4},{A5},{B5},{A6},{B6},{A7},{B7}</value>
+				<bean class="fg.eternity.plan.PlanLogger">
+					<property name="first">
+						<ref bean="mainRoute" />
+					</property>
+					<property name="loggerName" value="AAA_GOAL8"/>
+					<property name="logToTargetFolder" value="true"/>
+					<property name="targetFolder" value="${fg.eternity.goal.targetFolder}"/>
+					<property name="planSet">
+						<ref bean="mainTable" />
+					</property>
+				</bean>
+				<value>{A8}</value>
+				<ref bean="bingo"/>
+			</list>
+		</property>
+		<property name="planSet">
+			<ref bean="mainTable" />
+		</property>
+	</bean>
+
 	
 	<bean id="fieldSet"
 		class="fg.eternity.spring.FieldSet">

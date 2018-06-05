@@ -9,6 +9,7 @@ package fg.eternity.plan;
 import fg.eternity.bo.Field;
 import fg.eternity.bo.FieldVector;
 import fg.eternity.bo.Figure;
+import fg.eternity.validator.Validator;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -39,8 +40,7 @@ public class PlanSimpleSkeleton implements IPlanSimple,ILabelled {
 	}
 
 	public IRun compile(IndexMap indexMap, int level) {
-		if (planSet.getFieldOccupation()[field.getPos()] != null)
-			throw new RuntimeException("The field is occupied!!!!" + field);
+		Validator.isNull(planSet.getFieldOccupation()[field.getPos()],"The field is occupied!!!!" + field);
 
 		Field[] neighbouringFields = field.getNeighbouringFields();
 		FieldVector[] fieldVectors = new FieldVector[2];
@@ -50,14 +50,13 @@ public class PlanSimpleSkeleton implements IPlanSimple,ILabelled {
 			if (neighbouringFields[i] != null
 					&& planSet.getFieldOccupation()[neighbouringFields[i]
 							.getPos()] == Figure.ETALONMATCHFIGURE) {
-				if (fieldVectorsIndex >= fieldVectors.length) {
-					throw new RuntimeException(field.toStringg()
-							+ " Dependency more than " + fieldVectors.length);
-				}
+				Validator.isFalse(fieldVectorsIndex >= fieldVectors.length,field.toStringg() + " Dependency more than " + fieldVectors.length);
 				fieldVectors[fieldVectorsIndex++] = neighbouringFields[i]
 						.getMatchFields()[(i + 2) % 4];
 			}
 		}
+
+		Validator.isTrue(fieldVectorsIndex<3,"{} fieldVectorsIndex:{} ",field.toStringg(), fieldVectors.length);
 
 		plan = planSimples[fieldVectorsIndex];
 		if (fieldVectorsIndex == 2) {

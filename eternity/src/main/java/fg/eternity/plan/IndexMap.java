@@ -1,5 +1,6 @@
 package fg.eternity.plan;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -11,7 +12,7 @@ import fg.eternity.bo.Figure;
 import fg.eternity.bo.FigureVector;
 import fg.eternity.util.Utility;
 
-public class IndexMap {
+public class IndexMap implements Serializable {
 
     private HashMap map = new HashMap();
 
@@ -68,11 +69,7 @@ public class IndexMap {
             FigureVector[] fieldOccupation) {
         String key = prepos + keyGen(fields, fieldOccupation);
         String subKey = prepos + subKeyGen(fields, fieldOccupation);
-        Map m = (Map) map.get(key);
-        if (m == null) {
-            m = new HashMap();
-            map.put(key, m);
-        }
+        Map m = (Map) map.computeIfAbsent(key,o -> new HashMap());
         m.put(subKey, object);
     }
 

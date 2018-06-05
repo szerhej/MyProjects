@@ -12,7 +12,7 @@
 
 <div class="container" ng-show="elementList!=null">
     <div class="row" ng-repeat="y in elementList">
-        <div name="{{x.fieldTxt}}" class="col-sm-1" ng-repeat="x in y" style="width:unset;padding-right: 0px;padding-left: 0px;">
+        <div name="{{x.fieldTxt}}" class="col-sm-1" ng-repeat="x in y" title="{{x.fieldTxt}}" style="width:unset;padding-right: 0px;padding-left: 0px;">
             <img src="images/{{ x.id }}.png" width="50" height="50" style="transform:rotate({{ x.rotation }}deg);">
         </div>
     </div>

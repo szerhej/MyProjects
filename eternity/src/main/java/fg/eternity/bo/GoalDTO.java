@@ -9,7 +9,6 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 public class GoalDTO {
-    @NonNull
     private String id;
     @NonNull
     private String name;

@@ -8,6 +8,8 @@ package fg.eternity.bo;
 
 import fg.eternity.plan.IPlan;
 import fg.eternity.plan.IPlanSimple;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.commons.beanutils.PropertyUtils;
 
 import java.io.Serializable;
@@ -22,6 +24,7 @@ public class Field implements Comparable,Serializable {
 
 	public final static Field[] NULLARRAY = {};
 
+	@Setter @Getter
 	private FigureVector figureVector;
 
 	private FieldVector[] fieldVectors = new FieldVector[4];
@@ -74,21 +77,6 @@ public class Field implements Comparable,Serializable {
 			}
 		}
 		return allFields;
-	}
-
-	/**
-	 * @return Returns the figure.
-	 */
-	public FigureVector getVector() {
-		return figureVector;
-	}
-
-	/**
-	 *
-	 * @param figureVector The figure to set.
-	 */
-	public void setVector(FigureVector figureVector) {
-		this.figureVector = figureVector;
 	}
 
 	public Field getField(int index) {
@@ -174,7 +162,7 @@ public class Field implements Comparable,Serializable {
 		FigureVector[] fieldOccupation = new FigureVector[fields.length];
 		for (int i = 0; i < fieldOccupation.length; i++) {
 			if (fields[i] != null)
-				fieldOccupation[i] = fields[i].getVector();
+				fieldOccupation[i] = fields[i].getFigureVector();
 		}
 		return toString(fields, fieldOccupation);
 	}

@@ -17,6 +17,9 @@ import fg.eternity.bo.FigureVector;
 import fg.eternity.spring.FieldSet;
 import fg.eternity.spring.FigureSet;
 import fg.eternity.util.BoardParser;
+import fg.eternity.validator.Validator;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author gxfulop
@@ -25,61 +28,23 @@ import fg.eternity.util.BoardParser;
  * Preferences - Java - Code Style - Code Templates
  */
 public class PlanSet implements Serializable {
+
+	@Getter
 	private int[] figureCount;
 
+	@Getter
 	private FigureVector[] fieldOccupation;
 
+	@Setter @Getter
 	private Field[] fields;
 
+	@Setter @Getter
 	private Figure[] figures;
 
+	@Setter @Getter
 	private Config config;
 
 	private String defaults;
-
-	/**
-	 * @return Returns the fields.
-	 */
-	public Field[] getFields() {
-		return fields;
-	}
-
-	/**
-	 * @param fields
-	 *            The fields to set.
-	 */
-	public void setFields(Field[] fields) {
-		this.fields = fields;
-	}
-
-	/**
-	 * @return Returns the figures.
-	 */
-	public Figure[] getFigures() {
-		return figures;
-	}
-
-	/**
-	 * @param figures
-	 *            The figures to set.
-	 */
-	public void setFigures(Figure[] figures) {
-		this.figures = figures;
-	}
-
-	/**
-	 * @return Returns the figureCount.
-	 */
-	public int[] getFigureCount() {
-		return figureCount;
-	}
-
-	/**
-	 * @return Returns the fieldOccupation.
-	 */
-	public FigureVector[] getFieldOccupation() {
-		return fieldOccupation;
-	}
 
 	public void init() {
 		figureCount = new int[config.getDimMax()];
@@ -91,7 +56,7 @@ public class PlanSet implements Serializable {
 		}
 		for (int i = 0; i < fields.length; i++) {
 			if (fields[i] != null)
-				fieldOccupation[fields[i].getPos()] = fields[i].getVector();
+				fieldOccupation[fields[i].getPos()] = fields[i].getFigureVector();
 		}
 
 		initDefaults();
@@ -104,21 +69,6 @@ public class PlanSet implements Serializable {
 		planSet.fields = fields;
 		planSet.figures = figures;
 		return planSet;
-	}
-
-	/**
-	 * @return Returns the config.
-	 */
-	public Config getConfig() {
-		return config;
-	}
-
-	/**
-	 * @param config
-	 *            The config to set.
-	 */
-	public void setConfig(Config config) {
-		this.config = config;
 	}
 
 	public void setFieldSet(FieldSet fieldSet) {
@@ -150,16 +100,10 @@ public class PlanSet implements Serializable {
 				}
 			}
 
-			if (figure == null)
-				throw new RuntimeException("Figure does not exist!!! "
-						+ figureName);
+			Validator.notNull(figure,"Figure does not exist!!! {}",figureName);
+			Validator.isFalse(figure.getFigureCount() == 0,"Figure is already reserved!!! {}",figureName);
 
-			if (figure.getFigureCount() == 0) {
-				throw new RuntimeException("Figure is already reserved!!!"
-						+ figureName);
-			}
-
-			field.setVector(FigureVector.get(figure, Integer.valueOf(figureIndex)
+			field.setFigureVector(FigureVector.get(figure, Integer.valueOf(figureIndex)
 					.intValue()));
 			figureCount[figure.getId()]--;
 			fieldOccupation[field.getPos()] = FigureVector.get(figure,
