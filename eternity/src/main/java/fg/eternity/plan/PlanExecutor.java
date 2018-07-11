@@ -36,19 +36,12 @@ public class PlanExecutor implements IPlan,IPlanChainable {
 	@Getter @Setter
 	private IPlan next;
 
-	@Data
-	@AllArgsConstructor
-	private static class IntegratedData implements Serializable {
-		IPlan first;
-		IndexMap indexMap;
-	}
-
 	public IRun compile(IndexMap indexMap, int level) {
 		Validator.notNull(executor,"executor cannot be null!!!");
 		next.compile(indexMap,level);
 		return () ->  {
-			IntegratedData integratedData = LangUtils.deepCopy(new IntegratedData(first,indexMap));
-			IPlan iPlan = integratedData.getFirst();
+			IndexMap indexMap1 = new IndexMap();
+			IPlan iPlan =  LangUtils.deepCopy(first);
 
 			for(;iPlan!=null && !(iPlan instanceof PlanExecutor);iPlan = ((IPlanChained)iPlan).getNext());
 
@@ -57,7 +50,7 @@ public class PlanExecutor implements IPlan,IPlanChainable {
 
 			PlanExecutor planExecutor = (PlanExecutor) iPlan;
 
-			final IRun run = planExecutor.next.compile(integratedData.indexMap, level);
+			final IRun run = planExecutor.next.compile(indexMap1, level);
 
 			executor.execute(run::call);
 
